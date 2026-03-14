@@ -163,188 +163,89 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 }
 .nav-links a:hover { color: var(--ink); }
 
-/* ─── HERO ───────────────────────────────────────────── */
-.hero {
-  padding: 120px 40px 100px;
-  max-width: 1080px;
-  margin: 0 auto;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 80px;
-  align-items: center;
-}
-.hero-eyebrow {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  font-size: 12px;
-  font-weight: 600;
-  letter-spacing: .1em;
-  text-transform: uppercase;
-  color: var(--blue);
-  margin-bottom: 28px;
-}
-.hero-eyebrow-dot {
-  width: 6px;
-  height: 6px;
-  background: var(--blue);
-  border-radius: 50%;
-  animation: pulse-dot 2s ease infinite;
-}
-@keyframes pulse-dot {
-  0%, 100% { opacity: 1; transform: scale(1); }
-  50% { opacity: .4; transform: scale(.7); }
-}
-.hero-h1 {
-  font-family: var(--serif);
-  font-size: clamp(44px, 5.5vw, 72px);
-  line-height: 1.05;
-  letter-spacing: -.03em;
-  color: var(--ink);
-  margin-bottom: 24px;
-}
-.hero-h1 em {
-  font-style: italic;
-  color: var(--blue);
-}
-.hero-sub {
-  font-size: 17px;
-  color: var(--ink-2);
-  line-height: 1.72;
-  max-width: 440px;
-  margin-bottom: 40px;
-  font-weight: 400;
-}
-.hero-actions {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  margin-bottom: 48px;
-}
-.hero-proof {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
-.hero-proof-item {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  font-size: 13px;
-  color: var(--ink-3);
-}
-.hero-proof-item svg {
-  color: var(--blue);
-  flex-shrink: 0;
-}
-.hero-visual {
-  position: relative;
-}
-.hero-card-main {
-  background: #fff;
-  border: 1px solid var(--line);
-  border-radius: 16px;
-  padding: 32px;
-  box-shadow: 0 2px 8px rgba(10,11,13,.06), 0 24px 64px rgba(10,11,13,.08);
-}
-.hero-card-tag {
-  font-size: 11px;
-  font-weight: 700;
-  letter-spacing: .1em;
-  text-transform: uppercase;
-  color: var(--blue);
-  margin-bottom: 16px;
-}
-.hero-card-title {
-  font-family: var(--serif);
-  font-size: 22px;
-  letter-spacing: -.02em;
-  color: var(--ink);
-  margin-bottom: 20px;
-  line-height: 1.25;
-}
-.hero-steps-list {
-  list-style: none;
-  display: flex;
-  flex-direction: column;
-  gap: 0;
-}
-.hero-step {
-  display: flex;
-  align-items: center;
-  gap: 14px;
-  padding: 11px 0;
-  border-bottom: 1px solid var(--line);
-  font-size: 13.5px;
-  color: var(--ink-2);
-  font-weight: 500;
-}
-.hero-step:last-child { border-bottom: none; }
-.hero-step-num {
-  width: 24px;
-  height: 24px;
-  border-radius: 6px;
-  background: var(--blue-2);
-  color: var(--blue);
-  font-size: 11px;
-  font-weight: 700;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-shrink: 0;
-}
-.hero-card-footer {
-  margin-top: 24px;
-  padding-top: 20px;
-  border-top: 1px solid var(--line);
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-.hero-card-price {
-  font-family: var(--serif);
-  font-size: 28px;
-  color: var(--ink);
-  letter-spacing: -.03em;
-}
-.hero-card-price span {
-  font-size: 14px;
-  color: var(--ink-3);
-  font-family: var(--sans);
-  font-weight: 400;
-}
-.hero-float {
-  position: absolute;
-  top: -20px;
-  right: -24px;
-  background: #fff;
-  border: 1px solid var(--line);
-  border-radius: 12px;
-  padding: 14px 18px;
-  box-shadow: 0 8px 32px rgba(10,11,13,.1);
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  font-size: 13px;
-  animation: float-card 4s ease-in-out infinite;
-}
-@keyframes float-card {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-6px); }
-}
-.hero-float-avatar {
-  width: 32px;
-  height: 32px;
-  border-radius: 50%;
-  background: linear-gradient(135deg,#0d2060,#1a3a7a);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 14px;
-  flex-shrink: 0;
-}
-.hero-float-text strong { display: block; font-size: 12px; color: var(--ink); }
-.hero-float-text span { font-size: 11px; color: var(--ink-3); }
+<!-- HERO -->
+<div class="hero">
+  <div class="wrap">
+    <div class="hero-inner">
+      <div class="hero-left">
+        <div class="hero-badge">
+          <span class="hero-badge-dot"></span>
+          Curso · Coordenação BIM na Prática
+        </div>
+        <h1 class="display">
+          Pare de apertar<br>botões.<br><em>Coordene.</em>
+        </h1>
+        <p class="body-l hero-sub" style="max-width:460px;">
+          Método completo em 10 etapas — raciocínio técnico real, ferramentas integradas e processo que você aplica no projeto seguinte.
+        </p>
+
+        <!-- TOOL CHIPS -->
+        <div class="hero-tools">
+          <span class="tool-chip">
+            <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><rect width="14" height="14" rx="3" fill="#ff6b35" opacity=".15"/><text x="7" y="10" text-anchor="middle" font-size="7" font-weight="700" fill="#cc4a1a" font-family="Arial">NW</text></svg>
+            Navisworks
+          </span>
+          <span class="tool-chip">
+            <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><rect width="14" height="14" rx="3" fill="#4fc3f7" opacity=".15"/><circle cx="7" cy="7" r="4" fill="none" stroke="#0284c7" stroke-width="1.2"/><circle cx="7" cy="7" r="1.5" fill="#0284c7"/></svg>
+            Solibri
+          </span>
+          <span class="tool-chip">
+            <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><rect width="14" height="14" rx="3" fill="#1a5cff" opacity=".12"/><rect x="3" y="4" width="8" height="6" rx="1" fill="none" stroke="#1a5cff" stroke-width="1.2"/><rect x="5" y="6" width="2" height="1.5" rx=".4" fill="#1a5cff"/><rect x="8" y="6" width="2" height="1.5" rx=".4" fill="#1a5cff"/></svg>
+            BIMCollab
+          </span>
+          <span class="tool-chip">
+            <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><rect width="14" height="14" rx="3" fill="#000" opacity=".07"/><text x="7" y="10" text-anchor="middle" font-size="7" font-weight="700" fill="#333" font-family="Arial">N</text></svg>
+            Notion
+          </span>
+          <span class="tool-chip">
+            <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><rect width="14" height="14" rx="3" fill="#1a5cff" opacity=".12"/><path d="M4 9l2-2 1.5 1.5L10 5" stroke="#1a5cff" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            Assistente IA
+          </span>
+        </div>
+
+        <div class="hero-actions">
+          <a href="#modulos" class="btn btn-primary btn-lg">
+            Ver conteúdo do curso
+            <svg viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+          <button class="btn btn-ghost" onclick="openPopup('Fundamentos da Coordenação BIM')">▶ Aula gratuita</button>
+        </div>
+        <div class="hero-proof">
+          <div class="hero-proof-item"><strong>10</strong>etapas sequenciais</div>
+          <div class="hero-proof-sep"></div>
+          <div class="hero-proof-item"><strong>3h</strong>de aulas práticas</div>
+          <div class="hero-proof-sep"></div>
+          <div class="hero-proof-item"><strong>7 dias</strong>de garantia</div>
+        </div>
+      </div>
+
+      <!-- FOTO -->
+      <div class="hero-right">
+        <div class="hero-img-col">
+          <div style="position:relative;width:100%;max-width:360px;">
+            <div class="hero-photo-frame">
+              <img src="/mnt/user-data/uploads/1773518634695_FotoMarciano.jpg"
+                   alt="Marciano Tonatto"
+                   style="width:100%;height:100%;object-fit:cover;object-position:center top;display:block;">
+            </div>
+            <div class="hero-quote">
+              <div class="hero-quote-stars">★★★★★</div>
+              <p class="hero-quote-text">"Fechei um contrato novo depois de aplicar o método. O cliente pediu alguém que soubesse BIMCollab com rastreabilidade real — e eu soube."</p>
+              <div class="hero-quote-author">
+                <div class="hero-quote-av">RF</div>
+                <div>
+                  <div class="hero-quote-name">Rodrigo F.</div>
+                  <div class="hero-quote-role">Coordenador BIM · São Paulo</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
 
 /* ─── NÚMEROS ────────────────────────────────────────── */
 .numbers {
@@ -1475,6 +1376,30 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   .dep-destaque p { font-size: 20px; }
   .numbers-inner { padding: 0 20px; }
   .preco-card-top, .preco-card-body { padding: 24px 20px; }
+}
+  /* Tool chips */
+.hero-tools {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 24px 0 32px;
+}
+.tool-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 12.5px;
+  font-weight: 500;
+  color: var(--ink-2);
+  background: var(--white);
+  border: 1.5px solid var(--border-2);
+  border-radius: 100px;
+  padding: 6px 13px 6px 9px;
+  transition: border-color .15s, transform .15s;
+}
+.tool-chip:hover {
+  border-color: var(--blue);
+  transform: translateY(-1px);
 }
 </style>
 </head>
